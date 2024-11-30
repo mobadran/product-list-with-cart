@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(20, 50%, 98%);
+  font-size: 1rem;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 600;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto 20px auto;
+}
+main h1 {
+  font-size: 2rem;
+  width: 100%;
+}
+@media (min-width: 1056px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  main .card {
+    max-width: 300px;
+  }
+}
+
+.desserts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card .add-cart {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 10px 20px 10px 45px;
+  border-radius: 30px;
+  border: 1.5px solid hsl(14, 25%, 72%);
+  background-color: white;
+  transform: translateY(calc(-50% - 4px));
+  font-weight: 600;
+  position: relative;
+}
+.card .add-cart:hover {
+  cursor: pointer;
+}
+.card .add-cart::before {
+  content: url("../assets/images/icon-add-to-cart.svg");
+  position: absolute;
+  bottom: 5px;
+  left: 17px;
+}
+.card.cart-added img {
+  border: 2px solid hsl(14, 86%, 42%);
+}
+.card.cart-added .add-cart {
+  width: fit-content;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border: none;
+  gap: 30px;
+}
+.card.cart-added .add-cart::before {
+  content: none;
+}
+.card.cart-added .add-cart .decrement-sign {
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(20, 50%, 98%);
+}
+.card.cart-added .add-cart .increment-sign {
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(20, 50%, 98%);
+}
+.card .category {
+  font-weight: 400;
+  color: hsl(12, 20%, 44%);
+}
+.card .title {
+  color: hsl(14, 65%, 9%);
+}
+.card .price {
+  color: hsl(14, 86%, 42%);
+}
+.card .price::before {
+  content: "$";
+}
+
+.cart {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  height: fit-content;
+}
+.cart h2 {
+  color: hsl(14, 86%, 42%);
+}
+.cart img {
+  width: 80%;
+}
+.cart p {
+  color: hsl(12, 20%, 44%);
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.cart-items .items li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "title . x" "subtitles . x";
+  align-items: center;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+  padding-block: 10px;
+}
+.cart-items .items li .item-title {
+  grid-area: title;
+  color: hsl(14, 65%, 9%);
+}
+.cart-items .items li .item-subtitles {
+  grid-area: subtitles;
+  display: flex;
+  /* Align subtitles horizontally */
+  gap: 15px;
+  margin-top: 5px;
+}
+.cart-items .items li .item-subtitles .quantity {
+  color: hsl(14, 86%, 42%);
+}
+.cart-items .items li .item-subtitles .item-price {
+  color: hsl(7, 20%, 60%);
+}
+.cart-items .items li .remove-item-btn {
+  grid-area: x;
+  justify-self: end;
+  align-self: center;
+  background: none;
+  border: 1px solid hsl(7, 20%, 60%);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 1.5px;
+}
+.cart-items .total {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 20px;
+}
+.cart-items .total .order-total {
+  color: hsl(14, 65%, 9%);
+  font-weight: 400;
+  align-content: center;
+}
+.cart-items .total .order-total-value {
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+}
+.cart-items .cart-note {
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 10px;
+  display: flex;
+  gap: 5px;
+  padding: 15px;
+  font-size: 14px;
+  align-items: center;
+  width: 100%;
+}
+.cart-items .cart-note img {
+  width: 24px;
+}
+.cart-items .cart-note p {
+  color: hsl(14, 65%, 9%);
+}
+.cart-items .confirm-order {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 40px;
+  padding: 20px;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.attribution {
+  margin-inline: 20px;
+}

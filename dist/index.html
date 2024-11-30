@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+  <title>Product list with cart</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <section class="desserts">
+      <h1>Desserts</h1>
+      <div class="card cart-added">
+        <img src="./assets/images/image-waffle-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          <img src="./assets/images/icon-decrement-quantity.svg" alt="-" class="decrement-sign">
+          <p>
+            Add to Cart
+          </p>
+          <img src="./assets/images/icon-increment-quantity.svg" alt="+" class="increment-sign">
+        </button>
+
+        <p class="category">
+          Waffle
+        </p>
+        <p class="title">
+          Waffle with Berries
+        </p>
+        <p class="price">
+          6.50
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Crème Brûlée
+        </p>
+        <p class="title">
+          Vanilla Bean Crème Brûlée
+        </p>
+        <p class="price">
+          7.00
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-macaron-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Macaron
+        </p>
+        <p class="title">
+          Macaron Mix of Five
+        </p>
+        <p class="price">
+          8.00
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-tiramisu-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Tiramisu
+        </p>
+        <p class="title">
+          Classic Tiramisu
+        </p>
+        <p class="price">
+          5.50
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-baklava-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Baklava
+        </p>
+        <p class="title">
+          Pistachio Baklava
+        </p>
+        <p class="price">
+          4.00
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-meringue-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Pie
+        </p>
+        <p class="title">
+          Lemon Meringue Pie
+        </p>
+        <p class="price">
+          5.00
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-cake-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Cake
+        </p>
+        <p class="title">
+          Red Velvet Cake
+        </p>
+        <p class="price">
+          4.50
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-brownie-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Brownie
+        </p>
+        <p class="title">
+          Salted Caramel Brownie
+        </p>
+        <p class="price">
+          4.50
+        </p>
+      </div>
+
+
+      <div class="card">
+        <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="a dessert">
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+        <p class="category">
+          Panna Cotta
+        </p>
+        <p class="title">
+          Vanilla Panna Cotta
+        </p>
+        <p class="price">
+          6.50
+        </p>
+      </div>
+
+    </section>
+
+    <section class="cart">
+      <h2>Your Cart (<!-- Quantity -->)</h2>
+      <div class="empty-cart">
+        <img src="assets/images/illustration-empty-cart.svg" alt="Empty Cart">
+        <p>Your added items will appear here</p>
+      </div>
+
+
+      <div class="cart-items">
+        <ul class="items">
+          <li>
+            <p class="item-title">
+              Classic Tiramisu
+            </p>
+            <div class="item-subtitles">
+              <p class="quantity">1x</p>
+              <p class="item-price">@ $5.50</p>
+              <p class="items-price">$5.50</p>
+            </div>
+            <button class="remove-item-btn"><img src="../assets/images/icon-remove-item.svg" alt="X"></button>
+          </li>
+        </ul>
+
+        <div class="total">
+          <p class="order-total">Order Total</p>
+          <p class="order-total-value">$46.50</p>
+        </div>
+
+        <div class="cart-note">
+          <img src="../assets/images/icon-carbon-neutral.svg" alt="Carbon Neutral">
+          <p>This is a <strong>carbon-neutral</strong> delivery</p>
+        </div>
+
+        <button class="confirm-order">
+          Confirm Order
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://mobadran.github.io" target="_blank">Badraan</a>.
+  </div> -->
+</body>
+
+</html>

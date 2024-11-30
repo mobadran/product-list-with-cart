@@ -1,0 +1,5 @@
+node_modules/
+*.md
+gulpfile.js
+design/
+style-guide.md
